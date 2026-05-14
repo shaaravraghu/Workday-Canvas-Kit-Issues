@@ -1,0 +1,9 @@
+Suggested Title: Replace placeholder @see links in deprecated tokens documentation
+Suggested Template: chore
+Suggested Labels: chore
+
+## 🧹 Chore
+
+Update `modules/react/tokens/index.ts` to replace placeholder `@see {@link }` entries and the nearby `TODO: update link` comments in deprecated token exports such as `borderRadius`, `colors`, and `spaceNumbers`.
+
+These placeholders are likely to surface as incomplete generated docs, which makes migration guidance less useful for consumers trying to move to `@workday/canvas-tokens-web`.
