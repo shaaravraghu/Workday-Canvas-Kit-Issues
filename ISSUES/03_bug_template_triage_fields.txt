@@ -24,3 +24,26 @@ Add prompts such as:
 - "Regression? If yes, from which version?"
 
 Those fields would make new bug reports more actionable before maintainers begin investigation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
