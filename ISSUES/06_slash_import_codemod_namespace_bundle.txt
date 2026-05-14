@@ -1,0 +1,39 @@
+Suggested Title: v5 slash import codemod does not handle namespace imports from @workday/canvas-kit-react
+Suggested Template: bug
+Suggested Labels: bug
+
+## 🐛 Bug Report
+
+The v5 slash import codemod explicitly does not support namespace imports from `@workday/canvas-kit-react`. In `modules/codemod/lib/v5/slashImports.ts`, the handler logs an error and returns early when the source is the bundle import.
+
+## To Reproduce
+
+1. Create a file with `import * as Canvas from '@workday/canvas-kit-react';`.
+2. Run the v5 slash import codemod.
+3. Inspect the transformed output and console output.
+
+## Expected Behavior
+
+The codemod should either:
+- transform the namespace import into the correct slash import, or
+- fail with documented guidance and test coverage for the unsupported pattern.
+
+## Actual Results
+
+The codemod logs an error and leaves the namespace bundle import unresolved. The corresponding spec file also has a commented-out test for this exact case.
+
+## Browser (if applicable)
+
+N/A
+
+## Link to repl or repo (highly encouraged)
+
+Repo paths:
+- `modules/codemod/lib/v5/slashImports.ts`
+- `modules/codemod/lib/v5/spec/slashImport.spec.ts`
+
+### Error Output
+
+```bash
+Failed to split namespace import `import * as Canvas from @workday/canvas-kit-react`
+```
