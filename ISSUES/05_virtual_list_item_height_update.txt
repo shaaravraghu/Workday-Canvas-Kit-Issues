@@ -1,0 +1,36 @@
+Suggested Title: Virtual list item height updates are disabled in useListItemRegister
+Suggested Template: bug
+Suggested Labels: bug
+
+## 🐛 Bug Report
+
+`modules/react/collection/lib/useListItemRegister.tsx` contains a disabled height update for virtualized lists, with a TODO saying the update "doesn't seem to be working correctly." That suggests the first virtual item may not be reporting height updates as intended.
+
+## To Reproduce
+
+1. Review `useListItemRegister` in `modules/react/collection/lib/useListItemRegister.tsx`.
+2. Note that `events.updateItemHeight?.(localRef.current!.clientHeight);` is commented out inside the `virtual?.index === 0` branch.
+3. Exercise a virtualized list that depends on dynamic item height measurement.
+4. Compare rendered positioning with expected virtual layout behavior.
+
+## Expected Behavior
+
+Virtualized list items should report height changes consistently so the virtual layout can measure and position items correctly.
+
+## Actual Results
+
+The update path is disabled, which indicates dynamic height updates for the first measured item are currently not trusted or not functioning correctly.
+
+## Browser (if applicable)
+
+N/A
+
+## Link to repl or repo (highly encouraged)
+
+Repo path: `modules/react/collection/lib/useListItemRegister.tsx`
+
+### Error Output
+
+```bash
+No runtime error captured yet. The issue is based on the disabled height update path and inline TODO in the source.
+```
