@@ -1,0 +1,12 @@
+Suggested Title: Document or remove unexplained depcheck ignore rules for package self-imports
+Suggested Template: chore
+Suggested Labels: chore
+
+## 🧹 Chore
+
+Clarify the package self-import ignore rules in `utils/check-dependencies-exist.js`, where the script currently says `TODO: Figure out why we need this.` before adding ignores for:
+- `@workday/canvas-kit-react`
+- `@workday/canvas-kit-labs-react`
+- `@workday/canvas-kit-preview-react`
+
+This should either be documented with the underlying reason and expected cases, or revisited and removed if it is no longer necessary. Leaving unexplained exceptions in dependency tooling makes future maintenance and troubleshooting harder.
