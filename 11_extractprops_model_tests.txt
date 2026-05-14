@@ -1,0 +1,9 @@
+Suggested Title: Add missing model-based ExtractProps type tests
+Suggested Template: chore
+Suggested Labels: chore
+
+## 🧹 Chore
+
+Expand `modules/react/common/spec/components.test-d.tsx` around the "with a model" coverage area, where the file currently includes a TODO saying "Add more tests with a model."
+
+The existing type tests already cover several `ExtractProps` cases, but the TODO suggests there are still untested combinations for model-aware components. Filling that gap would reduce the chance of type regressions in core component utilities.
