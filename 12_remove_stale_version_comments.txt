@@ -1,0 +1,14 @@
+Suggested Title: Remove stale version-gated comments that reference past major releases
+Suggested Template: chore
+Suggested Labels: chore
+
+## 🧹 Chore
+
+Audit and remove stale version-gated TODO comments that now reference already-shipped major versions.
+
+Examples found during repo review:
+- `utils/update-css-package-version.js` says the file is needed "until v11 is released"
+- `modules/react/common/lib/styles/focusRing.ts` says "Update to ... in v15"
+- `modules/react/form-field/lib/FormFieldGroup.tsx` says `horizontal` will be removed in v13
+
+The repo's `lerna.json` is already at `15.0.4`, so these comments now read as outdated maintenance notes. Cleaning them up would make technical debt easier to trust and prioritize.
