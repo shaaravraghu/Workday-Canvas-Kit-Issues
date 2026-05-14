@@ -7,3 +7,18 @@ Suggested Labels: chore
 Update `.github/ISSUE_TEMPLATE/suggestion.md` to fix the sentence under "Motivation," which currently reads "What are the key benefits if this suggest was included to Canvas-Kit?".
 
 This is small, but it affects every contributor who opens a suggestion issue. Cleaning it up improves professionalism, reduces confusion, and makes the template easier to complete.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
