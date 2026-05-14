@@ -1,0 +1,22 @@
+Suggested Title: Restore dark mode token support in the MCP story harness
+Suggested Template: feature
+Suggested Labels: feature
+
+## 🚀 Feature Proposal
+
+Re-enable dark mode-aware background and foreground styling in `modules/mcp/build/harness.html`.
+
+## Motivation
+
+The file currently contains a TODO that comments out token-based colors:
+- `/* TODO: Bring this back once CKR supports dark mode */`
+
+The harness is forced to:
+- `background: #ffffff;`
+- `color: #333333;`
+
+That makes story rendering less representative for dark mode or inverse-token scenarios and can hide contrast problems that only appear outside the forced light theme.
+
+## Example
+
+Restore the token-driven values or add a controlled theme switch so maintainers can preview stories with both light and dark backgrounds when validating components and documentation output.
