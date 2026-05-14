@@ -1,0 +1,35 @@
+Suggested Title: Doc parser external symbol lookup does not handle generic type names
+Suggested Template: bug
+Suggested Labels: bug
+
+## 🐛 Bug Report
+
+`modules/docs/docgen/docParser.ts` includes a TODO stating that external symbol detection "won't work if the symbol contains a generic." This means generated documentation may fail to link external types correctly when the displayed type string includes generic parameters.
+
+## To Reproduce
+
+1. Review `getValueFromType` in `modules/docs/docgen/docParser.ts`.
+2. Pass a type string with generics into the external symbol lookup path, such as a type that renders like `Foo<Bar>`.
+3. Build or inspect doc generation output for that symbol.
+
+## Expected Behavior
+
+External type references should resolve to the correct external documentation URL whether or not the symbol string contains generic parameters.
+
+## Actual Results
+
+The current implementation calls `getExternalSymbol(typeToString)` directly and documents that the generic case does not work.
+
+## Browser (if applicable)
+
+N/A
+
+## Link to repl or repo (highly encouraged)
+
+Repo path: `modules/docs/docgen/docParser.ts`
+
+### Error Output
+
+```bash
+No runtime error captured yet. The issue is based on the documented limitation in the parser implementation.
+```
