@@ -1,0 +1,27 @@
+Suggested Title: Add a local issue communication workflow to CONTRIBUTING.md
+Suggested Template: suggestion
+Suggested Labels: suggestion
+
+## 💡 Suggestion
+
+Expand `CONTRIBUTING.md` so the repository includes a short local workflow for raising and communicating on issues instead of only linking to the external docs site.
+
+## Motivation
+
+The current `CONTRIBUTING.md` only says "You may read our contribution guidelines here," which means new contributors do not get repo-local guidance on how to:
+- check for an existing issue
+- confirm the issue is still relevant
+- ask whether maintainers want attention on it
+- communicate that they want to work on it
+- ask follow-up questions before opening a pull request
+
+Adding that workflow locally would align the repo with the contribution guidance already promoted in Canvas documentation and make onboarding easier for first-time contributors.
+
+## Example
+
+Add a short "Communicate on Issues" section to `CONTRIBUTING.md` that tells contributors to:
+1. search existing issues before opening a new one
+2. start with `good first issue` when appropriate
+3. ask maintainers whether the issue is still relevant
+4. comment if they plan to work on it
+5. ask questions early, especially for UI changes that may need design input
