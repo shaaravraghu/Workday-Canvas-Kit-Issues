@@ -1,0 +1,26 @@
+Suggested Title: Add version, package, and environment fields to the bug report template
+Suggested Template: feature
+Suggested Labels: feature
+
+## 🚀 Feature Proposal
+
+Extend `.github/ISSUE_TEMPLATE/bug.md` with structured fields for:
+- Canvas Kit version
+- affected package or module
+- browser and OS
+- reproduction environment
+- accessibility or visual impact
+
+## Motivation
+
+The current bug template asks for reproduction steps and optional browser details, but it does not explicitly collect the package name or Canvas Kit version. That can slow down triage in a monorepo with many modules and multiple supported major versions.
+
+## Example
+
+Add prompts such as:
+- "Canvas Kit version"
+- "Affected package or path"
+- "Environment (browser, OS, framework)"
+- "Regression? If yes, from which version?"
+
+Those fields would make new bug reports more actionable before maintainers begin investigation.
