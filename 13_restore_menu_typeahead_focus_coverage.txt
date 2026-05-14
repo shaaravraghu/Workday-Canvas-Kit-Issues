@@ -1,0 +1,12 @@
+Suggested Title: Restore skipped Cypress coverage for Menu printable-character focus behavior
+Suggested Template: chore
+Suggested Labels: chore
+
+## 🧹 Chore
+
+Re-enable or replace the skipped Cypress assertion in `cypress/component/Menu.spec.tsx` that is meant to verify printable-character focus movement inside the menu.
+
+Current skipped test:
+- `it.skip('should focus on the third item', ...)`
+
+The surrounding test context expects that typing `"t"` while the menu is open should move focus to the matching item text (`Third Item`). That is an important keyboard interaction for accessible menu typeahead behavior, so leaving the assertion skipped reduces confidence in a core interaction pattern.
