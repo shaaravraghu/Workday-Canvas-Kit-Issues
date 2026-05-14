@@ -25,3 +25,26 @@ Add a short "Communicate on Issues" section to `CONTRIBUTING.md` that tells cont
 3. ask maintainers whether the issue is still relevant
 4. comment if they plan to work on it
 5. ask questions early, especially for UI changes that may need design input
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
